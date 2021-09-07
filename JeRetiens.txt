@@ -1,0 +1,2 @@
+php artisan stub:publish  : cette commande permet de creer le dossier stubs dans l'aboressance du projet;
+dossier qui contient des fichiers qui permettent de modifier le contenenu de certains ficher lors de la creation.
