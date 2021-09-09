@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SessionCrontroller;
@@ -40,8 +41,9 @@ Route::resource('produits', ProduitController::class);
 Route::get('/upload',[UploadController::class,'uploadForm']);
 Route::post('/upload',[UploadController::class,'uploadFile'])->name('upload.uploadFile');
 
-Route::get('/{locale}', function ($locale) {
-    App::setlocale($locale);
-    return view('welcomeNew');
+// Route::get('/{locale}', function ($locale) {
+//     App::setlocale($locale);
+//     return view('welcomeNew');
+// });
 
-});
+Route::get('/send-mail',[MailController::class, 'sendMail']);

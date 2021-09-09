@@ -1,2 +1,17 @@
 php artisan stub:publish  : cette commande permet de creer le dossier stubs dans l'aboressance du projet;
 dossier qui contient des fichiers qui permettent de modifier le contenenu de certains ficher lors de la creation.
+
+//pour l'envoie de mail avec laravel, on suit la procedure suivante:
+1. on cree un controller pour gerer la logique de l'envoie du mail; ex: php artisan make:controller MailController
+2. on cree une classe specifique pour l'envoie du mail; ex: php artisan make:mail TestMail
+3. on part de le fichier d'environnement(.env) modifier les lignes suivantes:
+    MAIL_MAILER=smtp
+    MAIL_HOST=smtp.googlemail.com
+    MAIL_PORT=465
+    MAIL_USERNAME=non de la personne qui envoi le mail (ex:vanisfeutio6@gmail.com)
+    MAIL_PASSWORD=mon_mot_de_pass_du_gmail_qui_envoi
+    MAIL_ENCRYPTION=ssl
+    MAIL_FROM_ADDRESS=adresse de l'emetteur (ex:vanisfeutio6@gmail.com)
+    MAIL_FROM_NAME="${APP_NAME}"
+
+//
